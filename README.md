@@ -1,14 +1,14 @@
-# 🧠 TikTok Shop Scraping Project Documentation
+# 🗃️ TikTok Shop Scraping Project Documentation
 
 > Panduan untuk scraping TikTok Shop dengan Appium dan AWS.
 
 ---
 
 ## 📑 Table of Contents
-- [🧠 TikTok Shop Scraping Project Documentation](#-tiktok-shop-scraping-project-documentation)
+- [🗃️ TikTok Shop Scraping Project Documentation](#️-tiktok-shop-scraping-project-documentation)
   - [📑 Table of Contents](#-table-of-contents)
   - [⚙️ Persiapan Awal](#️-persiapan-awal)
-    - [Untuk Staf yg Scrape TikTokShop](#untuk-staf-yg-scrape-tiktokshop)
+    - [👥 Untuk Staf yg Scrape TikTokShop](#-untuk-staf-yg-scrape-tiktokshop)
     - [👩‍💻 Tambahan untuk PIC TikTokShop](#-tambahan-untuk-pic-tiktokshop)
   - [🗂️ Struktur Directory](#️-struktur-directory)
   - [🧩 Penjelasan Program](#-penjelasan-program)
@@ -16,22 +16,22 @@
     - [📘 Library (Folder `io_tools.TOOLKIT_DIR`)](#-library-folder-io_toolstoolkit_dir)
     - [🤖 Appium Automation (Folder `io_tools.SCRIPT_DIR`)](#-appium-automation-folder-io_toolsscript_dir)
     - [🧾 Data Processing](#-data-processing)
-    - [☁️ For Interacting with AWS](#️-for-interacting-with-aws)
+    - [🌩️ For Interacting with AWS](#️-for-interacting-with-aws)
     - [📂 Archive Scripts (Folder `io_tools.ARCHIVE_DIR`)](#-archive-scripts-folder-io_toolsarchive_dir)
     - [▶️ Sebelum Menjalankan `appium_*.py`](#️-sebelum-menjalankan-appium_py)
   - [🔌 Cara Connect Smartphone ke PC](#-cara-connect-smartphone-ke-pc)
     - [🔗 Via USB](#-via-usb)
     - [📡 Via WiFi](#-via-wifi)
   - [🧠 Cara Pakai Appium Inspector](#-cara-pakai-appium-inspector)
-  - [☁️ Cara Upload Layers](#️-cara-upload-layers)
-    - [Untuk Library Eksternal](#untuk-library-eksternal)
-    - [Untuk Library Buatan Sendiri](#untuk-library-buatan-sendiri)
+  - [🛰️ Cara Upload Layers](#️-cara-upload-layers)
+    - [🧪 Untuk Library Eksternal](#-untuk-library-eksternal)
+    - [🧬 Untuk Library Buatan Sendiri](#-untuk-library-buatan-sendiri)
     - [🚀 Upload Layer ke AWS Lambda via console](#-upload-layer-ke-aws-lambda-via-console)
       - [📤 Upload Pertama](#-upload-pertama)
       - [🔄 Update Layer yang Sudah Ada](#-update-layer-yang-sudah-ada)
-  - [🧾 Info Penting](#-info-penting)
-    - [⚙️ Operasional dan Penggunaan](#️-operasional-dan-penggunaan)
-    - [⚠️ Kendala Umum \& Solusi](#️-kendala-umum--solusi)
+  - [💥 Info Penting](#-info-penting)
+    - [🛠️ Operasional dan Penggunaan](#️-operasional-dan-penggunaan)
+    - [💣 Kendala Umum \& Solusi](#-kendala-umum--solusi)
     - [🌐 Jenis URL Produk](#-jenis-url-produk)
     - [🕒 Jadwal Otomatis](#-jadwal-otomatis)
     - [🤝 Workflow Scraping Seller (Multi-Device)](#-workflow-scraping-seller-multi-device)
@@ -42,7 +42,7 @@
 
 ## ⚙️ Persiapan Awal
 
-### Untuk Staf yg Scrape TikTokShop
+### 👥 Untuk Staf yg Scrape TikTokShop
 1. Smartphone dengan TikTok & TikTokShop (Android ≥ 8.2)
 2. Kabel data & PC
 3. Nonaktifkan layar kunci, aktifkan Developer Mode & USB Debugging (beberapa butuh aktifkan Wireless ADB)
@@ -147,7 +147,7 @@ Selain langkah di atas:
 
 ---
 
-### ☁️ For Interacting with AWS
+### 🌩️ For Interacting with AWS
 - **`return_failed_urls.py`** → Mengembalikan URL gagal dari Dead Letter Queue (DLQ) ke SQS utama agar bisa diproses ulang.
 - **`create_or_truncate_table.py`** → Membuat atau mengosongkan tabel DynamoDB berdasarkan konfigurasi di `aws_tools`.
 
@@ -224,9 +224,9 @@ Pastikan semua langkah berikut sudah dilakukan sebelum menjalankan program Appiu
 8. kalau direfresh ga bisa/error waktu klik/search element, biasanya karena putus koneksi, jadi perlu keluar terus Start Session lagi
 ---
 
-## ☁️ Cara Upload Layers
+## 🛰️ Cara Upload Layers
 
-### Untuk Library Eksternal
+### 🧪 Untuk Library Eksternal
 1. Buat folder `layer_name/python` di `AWS_DIR`  
 2. Tambahkan `requirements.txt`  
 3. Install dependensi:  
@@ -235,7 +235,7 @@ Pastikan semua langkah berikut sudah dilakukan sebelum menjalankan program Appiu
    ```
 4. Zip folder `python` → upload ke AWS Lambda Layers. folder `python` bisa dihapus kalau sudah upload
 
-### Untuk Library Buatan Sendiri
+### 🧬 Untuk Library Buatan Sendiri
 1. Buat folder `layer_name/python` di `AWS_DIR`  
 2. Taruh file program di dalamnya  
 3. Zip dan upload ke AWS
@@ -265,9 +265,9 @@ Pastikan semua langkah berikut sudah dilakukan sebelum menjalankan program Appiu
 
 ---
 
-## 🧾 Info Penting
+## 💥 Info Penting
 
-### ⚙️ Operasional dan Penggunaan
+### 🛠️ Operasional dan Penggunaan
 1. Lihat `IMAGE_DIR/tiktokshop_pipeline.png` untuk diagram pipeline lengkap.  
 2. Lihat `IMAGE_DIR/appium_*_instruction.png` untuk ilustrasi koordinat, batas scroll, dan faktor pergerakan.  
 3. Simpan credential akun IAM di `.env`.  
@@ -276,7 +276,7 @@ Pastikan semua langkah berikut sudah dilakukan sebelum menjalankan program Appiu
 6. Emulator tidak bisa dipakai karena terdeteksi bot (banyak captcha & program tidak bisa bypass).  
 7. **Staf selain PIC hanya perlu menjalankan program `appium_*.py` saja.**
 
-### ⚠️ Kendala Umum & Solusi
+### 💣 Kendala Umum & Solusi
 - Program `appium_*.py` kadang crash karena faktor Appium, jaringan, kabel data, atau overheat device.  
   **Solusi cepat:** restart Appium server atau jeda scraping beberapa menit.
   ```bash
@@ -324,7 +324,7 @@ Pastikan semua langkah berikut sudah dilakukan sebelum menjalankan program Appiu
    Untung kalau kena block di cloud masih bisa lanjut scraping. 
    Kalau di pc program harus di-stop dulu dan sebaiknya dijeda sebelum mulai lagi.
 
-2. 🧩 **Optimalkan deteksi duplicate.**  
+2. 🔍 **Optimalkan deteksi duplicate.**  
    Saat ini, duplikasi hanya dicek berdasarkan *judul produk* yang terpotong di tampilan.  
    Gunakan atribut lain seperti harga, rating atau unit terjual untuk skip produk yang sudah di-crawl.  
    Implementasi *pre-filtering* di tahap crawling akan menghemat waktu dan mencegah request berulang ke produk sama.
