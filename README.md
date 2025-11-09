@@ -9,7 +9,7 @@
   - [📑 Table of Contents](#-table-of-contents)
   - [⚙️ Persiapan Awal](#️-persiapan-awal)
     - [👥 Untuk Staf yg Scrape TikTokShop](#-untuk-staf-yg-scrape-tiktokshop)
-    - [👩‍💻 Tambahan untuk PIC TikTokShop](#-tambahan-untuk-pic-tiktokshop)
+    - [👩‍💻 Tambahan khusus PIC TikTokShop](#-tambahan-khusus-pic-tiktokshop)
   - [🗂️ Struktur Directory](#️-struktur-directory)
   - [🧩 Penjelasan Program](#-penjelasan-program)
     - [☁️ Running on AWS (Folder `io_tools.AWS_DIR`)](#️-running-on-aws-folder-io_toolsaws_dir)
@@ -62,7 +62,7 @@
 8. IAM User (dibuatkan pic)
 ---
 
-### 👩‍💻 Tambahan untuk PIC TikTokShop
+### 👩‍💻 Tambahan khusus PIC TikTokShop
 
 Selain langkah di atas:
 1. Buat akun **AWS Admin**
